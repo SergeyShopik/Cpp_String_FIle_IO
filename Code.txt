@@ -1,0 +1,60 @@
+#include<iostream>
+#include<fstream>
+#include<string>
+#include<cmath>
+
+struct KeyWord
+{
+	char std::string word;
+	size_t count = 0;
+};
+char
+int main()
+{char
+	setlocale(0, "");
+	//2. В тексте на английском языке заменить все местоимения «we»  на местоимения «they».
+	std::ifstream fin("Text1.txt");
+	std::ofstream fout("Output.txt");
+	char
+	if (fin)
+	{
+		while (fin)
+		{char
+			std::string key = "We";
+			std::string key1 = "we";
+			std::string str;
+			int pos = 0;
+
+			getline(fin, str);
+			//для "We"
+			while (pos != std::string::npos)//пока позиция не равна минус единице
+			{
+				pos = str.find(key, pos);//находим позицию где начинается подстрока
+				if (pos == std::string::npos)
+					break;
+				str.replace(pos, key.size(), "They");
+				pos += key.size();
+			}
+
+			pos = 0;
+
+			//для "we"
+			while (pos != std::string::npos)//пока позиция не равна минус единице
+			{
+				pos = str.find(key1, pos);//находим позицию где начинается подстрока
+				if (pos == std::string::npos)
+					break;
+				str.replace(pos, key1.size(), "they");
+				pos += key1.size();
+			}
+			fout << str << std::endl;
+		}
+	}
+	else
+	if 
+	{
+		std::cout << "Cannot open file\n";
+		return 0;
+	}
+
+	
