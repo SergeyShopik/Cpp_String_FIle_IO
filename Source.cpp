@@ -12,7 +12,7 @@ struct KeyWord
 int main()
 {
 	setlocale(0, "");
-	// 2. In C++ code sample insert "unsigned" before every "char" keyword.
+	// 1. In C++ code sample insert "unsigned" before every "char" keyword.
 	std::ifstream fin1("Code.txt");
 	std::ofstream fout1("CharOutput.txt");
 
@@ -88,7 +88,7 @@ int main()
 		return 0;
 	}
 
-	// 4. Given double value representing sum of money in rubles and pennies.
+	// 3. Given double value representing sum of money in rubles and pennies.
 	// Transform number to string dividing every three digits with a backspace. Add "rubles", "ruble" or "rublei" in the end.
 	// Add "pen." after pennies. For example: 123 765 rublei 98 pen.
 	double number, temp;
@@ -108,20 +108,20 @@ int main()
 		result = result.insert(i, " ");
 
 	if ((rub % 100 > 10 && rub % 100 < 20) || rub % 10 > 4 || rub % 10 == 0)
-		result += " ğóáëåé ";
+		result += " rubles ";
 	else if (rub % 10 > 1 && rub % 10 < 5)
-		result += " ğóáëÿ ";
+		result += " rublei ";
 	else
-		result += " ğóáëü ";
+		result += " ruble ";
 
 	copResult = std::to_string(cop);
 
 	result += copResult;
-	result += " êîï.";
+	result += " ÃªÃ®Ã¯.";
 
 	std::cout << result << std::endl;
 
-	// 5. Given C++ code sample. Write in the output file all keywords, number of their appearances and the most frequent one.
+	// 4. Given C++ code sample. Write in the output file all keywords, number of their appearances and the most frequent one.
 
 	KeyWord* array = new KeyWord[20];
 	std::ifstream fin3("Text1.txt");
